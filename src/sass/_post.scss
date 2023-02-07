@@ -1,0 +1,66 @@
+.post {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+    @include respond(sm) {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+  .post-img {
+    @include respond(sm) {
+      width: 50%;
+    }
+  }
+  .post-content {
+    padding: 30px;
+    color: $white_color;
+    background-color: $blue;
+    @include respond(sm) {
+      width: 50%;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    @include respond(lg) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .content-text {
+      @include respond(sm) {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      @include respond(lg) {
+        -webkit-line-clamp: inherit;
+        -webkit-box-orient: inherit;
+        display: inherit;
+        overflow: initial;
+      }
+    }
+    .btn {
+      max-width: 196px;
+      margin-top: 20px;
+      transition-property: background-color, border-color;
+      transition-duration: 0.3s;
+      transition-timing-function: linear;
+      &:hover,
+      &:focus {
+        background-color: #1270a7;
+        border-color: transparent;
+      }
+      @include respond(sm) {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        font-size: 14px;
+      }
+      @include respond(sm) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 18px;
+      }
+    }
+  }
+}

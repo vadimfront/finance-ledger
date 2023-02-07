@@ -1,0 +1,74 @@
+.team {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  .content-text {
+    margin-bottom: 37px;
+  }
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  @include respond(md) {
+    gap: 20px;
+  }
+  .team-item {
+    @include respond(md) {
+      flex-basis: calc((100% - 40px) / 3);
+    }
+    & > .team_image {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      & > .overlay {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #00000099;
+        transition-property: height, opacity, transform;
+        transition-duration: 0.3s;
+        transition-timing-function: linear;
+        transform: translateY(101%);
+      }
+      &:hover > .overlay,
+      &:focus > .overlay {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    & > .team-name {
+      font-size: 23px;
+      line-height: 1.2;
+      margin-top: 15px;
+    }
+    & > .team-position {
+      margin-top: 11px;
+    }
+  }
+  .social-links {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    .icon {
+      fill: $white_color;
+      transition-property: fill;
+      transition-duration: 0.3s;
+      transition-timing-function: linear;
+    }
+    & > .social-item > a {
+      display: block;
+      &:hover > .icon,
+      &:focus > .icon {
+        fill: $hover-color;
+      }
+    }
+  }
+}

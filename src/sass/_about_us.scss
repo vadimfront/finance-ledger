@@ -1,0 +1,72 @@
+.about_us {
+  & > .container {
+    padding-left: 0;
+    padding-right: 0;
+    @include respond(sm) {
+      display: flex;
+    }
+  }
+  .about_us-img {
+    @include respond(sm) {
+      width: 50%;
+    }
+  }
+  .about_us-content {
+    padding: 30px;
+    color: $white_color;
+    background-color: $green;
+    @include respond(sm) {
+      width: 50%;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    @include respond(md) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+    @include respond(lg) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .content-text {
+      margin-bottom: 14px;
+      @include respond(sm) {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      @include respond(md) {
+        -webkit-line-clamp: 6;
+      }
+      @include respond(md-plus) {
+        -webkit-line-clamp: inherit;
+        -webkit-box-orient: inherit;
+        display: inherit;
+        overflow: initial;
+      }
+    }
+    & > .btn {
+      max-width: 167px;
+      transition-property: background-color, border-color;
+      transition-duration: 0.3s;
+      transition-timing-function: linear;
+      &:hover,
+      &:focus {
+        background-color: $hover-color;
+        border-color: transparent;
+      }
+      @include respond(sm) {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        font-size: 14px;
+      }
+      @include respond(md) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 18px;
+      }
+    }
+  }
+}

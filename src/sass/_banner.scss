@@ -1,0 +1,57 @@
+.banner_home {
+  background-image: url(../images/banner_bg_mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-top: 144px;
+  padding-bottom: 95px;
+  @include respond(md) {
+    padding-top: 407px;
+    padding-bottom: 412px;
+    background-image: url(../images/banner_bg_tablet.jpg);
+  }
+  @include respond(md-plus) {
+    padding-top: 279px;
+    padding-bottom: 284px;
+    background-image: url(../images/banner_bg_desktop.jpg);
+  }
+  .banner_home-content {
+    text-align: center;
+    & > .banner_home-title {
+      font-size: 52px;
+      line-height: 1.26;
+      font-weight: 300;
+      color: $gray;
+    }
+    & > .banner_home-text {
+      font-size: 22px;
+      line-height: 1.68;
+      color: $gray;
+      margin-top: 16px;
+    }
+
+    & > .btn {
+      position: relative;
+      background-color: $green;
+      border: none;
+      margin: 27px auto 0 auto;
+      transition-property: background-color;
+      transition-duration: 0.3s;
+      transition-timing-function: linear;
+      &:hover,
+      &:focus {
+        background-color: $hover-color;
+      }
+      &::before {
+        position: absolute;
+        top: calc(50% - 9px);
+        left: 27px;
+        display: block;
+        width: 9px;
+        height: 18px;
+        content: "";
+        background-image: url("../images/arrow_btn_icon.svg");
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}

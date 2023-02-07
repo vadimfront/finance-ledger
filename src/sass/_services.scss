@@ -1,0 +1,38 @@
+.services {
+  padding-top: 30px;
+  padding-bottom: 31px;
+  .services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    @include respond(md) {
+      gap: 50px;
+    }
+    .services-item {
+      text-align: center;
+      @include respond(md) {
+        flex-basis: calc((100% - 100px) / 3);
+      }
+      & > .services-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background-color: $green;
+        margin: 0 auto;
+        & > .icon {
+          fill: $white_color;
+        }
+      }
+      & > .services-title {
+        margin-top: 9px;
+      }
+      & > .services-text {
+        margin-top: 15px;
+      }
+    }
+  }
+}

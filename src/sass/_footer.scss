@@ -1,0 +1,31 @@
+.footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: $black;
+  .container {
+    & > .footer_social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      & > .footer_social-links-item > a {
+        &:hover > .icon,
+        &:focus > .icon {
+          fill: $hover-color;
+        }
+      }
+    }
+    & > .copyright {
+      color: $white_color;
+      margin-top: 9px;
+      text-align: center;
+    }
+  }
+  .icon {
+    fill: $white_color;
+    transition-property: fill;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+  }
+}

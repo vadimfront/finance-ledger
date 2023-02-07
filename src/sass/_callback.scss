@@ -1,0 +1,87 @@
+.callback {
+  & > .container {
+    padding-left: 0;
+    padding-right: 0;
+    @media screen and (min-width: 600px) {
+      display: flex;
+    }
+  }
+  .callback_img {
+    @media screen and (min-width: 600px) {
+      flex-basis: 50%;
+    }
+  }
+  .callback_content {
+    padding: 26px 30px;
+    background-color: $gray-dark;
+    @include respond(md-plus) {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+    @media screen and (min-width: 600px) {
+      flex-basis: 50%;
+    }
+    & > .content-title {
+      @include respond(md-plus) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .callback-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    & > .input-text {
+      background-color: $white_color;
+      border: 1px solid $input-border;
+      padding: 9px 5px;
+      &::placeholder {
+        font-size: 16px;
+        line-height: 1.4;
+        @include respond(md) {
+          font-size: 18px;
+        }
+      }
+    }
+    & > .input-text:first-child {
+      margin-bottom: 36px;
+      @media screen and (min-width: 600px) {
+        margin-bottom: 15px;
+      }
+      @include respond(md) {
+        margin-bottom: 36px;
+      }
+      @include respond(md-plus) {
+        margin-bottom: 15px;
+      }
+      @media screen and (min-width: 950px) {
+        margin-bottom: 36px;
+      }
+    }
+    & > .btn {
+      background-color: $green;
+      border: none;
+      border-radius: 5px;
+      margin-top: 53px;
+      transition-property: background-color;
+      transition-duration: 0.3s;
+      transition-timing-function: linear;
+      &:hover,
+      &:focus {
+        background-color: $hover-color;
+      }
+      @media screen and (min-width: 600px) {
+        margin-top: 15px;
+      }
+      @include respond(md) {
+        margin-top: 53px;
+      }
+      @include respond(md-plus) {
+        margin-top: 15px;
+      }
+      @media screen and (min-width: 950px) {
+        margin-top: 53px;
+      }
+    }
+  }
+}
