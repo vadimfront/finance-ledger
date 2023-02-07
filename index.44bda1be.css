@@ -375,17 +375,10 @@ button {
   content: "";
   background-image: url("arrow_btn_icon.35fe2aca.svg");
   background-repeat: no-repeat;
-  transition-property: transform;
-  transition-duration: .3s;
-  transition-timing-function: linear;
   display: block;
   position: absolute;
   top: calc(50% - 9px);
   left: 27px;
-}
-
-.banner_home .banner_home-content > .btn:hover:before, .banner_home .banner_home-content > .btn:focus:before {
-  transform: rotate(-90deg);
 }
 
 .services {
@@ -425,6 +418,10 @@ button {
   align-items: center;
   margin: 0 auto;
   display: flex;
+}
+
+.services .services-list .services-item > .services-icon > .icon {
+  fill: #fff;
 }
 
 .services .services-list .services-item > .services-title {
@@ -685,6 +682,28 @@ button {
   }
 }
 
+.team-list .team-item > .team_image {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-list .team-item > .team_image > .overlay {
+  opacity: 0;
+  background-color: #0009;
+  transition-property: height, opacity, transform;
+  transition-duration: .3s;
+  transition-timing-function: linear;
+  position: absolute;
+  inset: 0;
+  transform: translateY(101%);
+}
+
+.team-list .team-item > .team_image:hover > .overlay, .team-list .team-item > .team_image:focus > .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .team-list .team-item > .team-name {
   margin-top: 15px;
   font-size: 23px;
@@ -693,6 +712,29 @@ button {
 
 .team-list .team-item > .team-position {
   margin-top: 11px;
+}
+
+.team-list .social-links {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  display: flex;
+}
+
+.team-list .social-links .icon {
+  fill: #fff;
+  transition-property: fill;
+  transition-duration: .3s;
+  transition-timing-function: linear;
+}
+
+.team-list .social-links > .social-item > a {
+  display: block;
+}
+
+.team-list .social-links > .social-item > a:hover > .icon, .team-list .social-links > .social-item > a:focus > .icon {
+  fill: #0c8427;
 }
 
 .callback > .container {
@@ -853,4 +895,4 @@ button {
   transition-timing-function: linear;
 }
 
-/*# sourceMappingURL=index.e66bab25.css.map */
+/*# sourceMappingURL=index.44bda1be.css.map */
