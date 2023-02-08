@@ -698,17 +698,15 @@ button {
 .team-list .team-item > .team_image > .overlay {
   opacity: 0;
   background-color: #0009;
-  transition-property: height, opacity, transform;
+  transition-property: opacity;
   transition-duration: .3s;
   transition-timing-function: linear;
   position: absolute;
   inset: 0;
-  transform: translateY(101%);
 }
 
-.team-list .team-item > .team_image:hover > .overlay, .team-list .team-item > .team_image:focus > .overlay {
+.team-list .team-item > .team_image:hover > .overlay, .team-list .team-item > .team_image.active > .overlay {
   opacity: 1;
-  transform: translateY(0);
 }
 
 .team-list .team-item > .team-name {
@@ -902,4 +900,4 @@ button {
   transition-timing-function: linear;
 }
 
-/*# sourceMappingURL=index.e474877f.css.map */
+/*# sourceMappingURL=index.4803f083.css.map */
