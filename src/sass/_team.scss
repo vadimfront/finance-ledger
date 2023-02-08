@@ -31,15 +31,17 @@
         right: 0;
         bottom: 0;
         background-color: #00000099;
-        transition-property: height, opacity, transform;
+        transition-property: opacity;
         transition-duration: 0.3s;
         transition-timing-function: linear;
-        transform: translateY(101%);
       }
-      &:hover > .overlay,
-      &:focus > .overlay {
+      &:hover > .overlay {
         opacity: 1;
-        transform: translateY(0);
+      }
+    }
+    & > .team_image.active {
+      & > .overlay {
+        opacity: 1;
       }
     }
     & > .team-name {

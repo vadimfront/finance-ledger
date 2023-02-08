@@ -14,6 +14,7 @@
   "author": "vadim",
   "license": "ISC",
   "dependencies": {
+    "jquery": "^3.6.3",
     "modern-normalize": "^1.1.0",
     "parcel": "latest",
     "posthtml-shorten": "^1.0.0"
