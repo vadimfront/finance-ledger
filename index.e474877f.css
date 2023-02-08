@@ -178,6 +178,7 @@ button {
 }
 
 .logo > .icon {
+  fill: #28a745;
   margin-right: 5px;
 }
 
@@ -572,6 +573,12 @@ button {
   }
 }
 
+@media screen and (min-width: 620px) {
+  .activities .activities-list > .activities-item {
+    flex-basis: calc(33.3333% - 7px);
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .activities .activities-list > .activities-item {
     flex-basis: calc(25% - 6px);
@@ -895,4 +902,4 @@ button {
   transition-timing-function: linear;
 }
 
-/*# sourceMappingURL=index.44bda1be.css.map */
+/*# sourceMappingURL=index.e474877f.css.map */
